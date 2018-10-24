@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.container  {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #95e1d3;
+}
+
+.navigation {
+    margin-left: 575px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-left: 45px;
+}
+
+.link {
+    text-decoration: none;
+    color: #95e1d3;
+    position: relative;
+}
+
+.link:hover {
+    color: #f38181;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+
+.link:hover::after {
+    content: '';
+    display: block;
+    transition-property: width, height;
+    transition-duration: 200ms;
+    width: 100%;
+    height: 3px;
+    margin: 0 auto;
+    background: #f38181;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.title-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title-kaushan {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.title-montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.title-wrapper::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    background: #f38181;
+    margin-top: 40px;
+}
+
+.article-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    width: 380px;
+    height: 80px;
+}
+
+.alarm {
+    background-image: url(..img/alarm.png)
+}
+.article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.article-text {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #999999;
+    text-align: left;
+}
+
+.description {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #999999;
+    text-align: center;
+}
+
+.team-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.box {
+    margin-right: 29px;
+}
+
+.card {
+    position: relative;
+    width: 380px;
+    height: 470px;
+    margin: 0;
+    z-index: 5;
+}
+
+.card-background::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #95e1d3;
+    z-index: 1;
+}
+
+.card-inner {
+    position: absolute;
+    opacity: 0;
+    background-image: linear-gradient(to bottom, #f38181, #fce38a);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-duration: 200ms;
+    z-index: 6;
+}
+
+.card:hover .card-inner {
+    opacity: 0.9;
+    
+}
+
+.card:hover {
+    transform: translate(-10px, -10px);
+    transition-duration: 200ms;
+}
+
+.card-buttons  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 78px;
+    margin: auto;
+    width: 380px;
+    height: 60px;
+}
+
+.card_button {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: #fce38a;
+    margin: 1px;
+}
+
+.card_button:hover {
+    background-color: #95e1d3;
+}
+
+.name {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    color: #333333;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.role {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    color: #a6a6a6;
+    margin: 0;
+    padding: 0;
+}
+
+.team-wrapper::after {
+    content: '';
+    display: block;
+    width: 1200px;
+    height: 1px;
+    margin: 0 auto;
+    background: #e5e5e5;
+    margin-top: 80px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+}
+
+.sign {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+span {
+    color: #f59191;
+}
+
+.subscribe {
+    height: 38px;
+    width: 150px;
+    background-color: #95e1d3;
+}
+
+input {
+    height: 38px;
+}
