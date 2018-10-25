@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -7,7 +7,6 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-size: 0;
 }
 
 .container  {
@@ -57,8 +56,9 @@ body, html {
     margin-left: 45px;
 }
 
-.link {
+.menu-link {
     text-decoration: none;
+    text-transform: uppercase;
     color: #95e1d3;
     position: relative;
 }
@@ -67,13 +67,15 @@ body, html {
     color: #f38181;
     transition-property: color;
     transition-duration: 200ms;
+    transition-timing-function: linear;
 }
 
-.link:hover::after {
+.menu-link:hover::after {
     content: '';
     display: block;
     transition-property: width, height;
     transition-duration: 200ms;
+    transition-timing-function: linear;
     width: 100%;
     height: 3px;
     margin: 0 auto;
@@ -125,29 +127,63 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-position-x: left;
+    background-repeat: no-repeat;
     flex-wrap: wrap;
     position: relative;
     width: 380px;
     height: 80px;
+    margin-top: 100px;
 }
 
 .alarm {
-    background-image: url(..img/alarm.png)
+    background-image: url(../img/alarm.png);
 }
+
+.line {
+    background-image: url(../img/line.png);
+}
+
+.computer {
+    background-image: url(../img/computer.png);
+}
+
+.book {
+    background-image: url(../img/book.png);
+}
+
+.home {
+    background-image: url(../img/home.png);  
+}
+
+.digital {
+    background-image: url(../img/digital.png);
+}
+
+
 .article-title {
     font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 25px;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    margin:0;
+    padding-left: 30px;
 }
 
 .article-text {
+    position: absolute;
+    top: 20px;
+    left: 25px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #999999;
     text-align: left;
+    padding-left: 30px;
 }
 
 .description {
@@ -156,6 +192,7 @@ body, html {
     font-weight: 400;
     color: #999999;
     text-align: center;
+    margin-bottom: 96px;
 }
 
 .team-wrapper {
@@ -163,6 +200,9 @@ body, html {
     flex-direction: row;
     justify-content: space-between;
     width: 1200px;
+    padding-bottom: 80px;
+    border-bottom: #e5e5e5 solid;
+    border-bottom-width: 1px;
 }
 
 .box {
@@ -174,18 +214,11 @@ body, html {
     width: 380px;
     height: 470px;
     margin: 0;
-    z-index: 5;
 }
 
-.card-background::before {
+.card-background {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     background: #95e1d3;
-    z-index: 1;
 }
 
 .card-inner {
@@ -197,7 +230,7 @@ body, html {
     right: 0;
     bottom: 0;
     transition-duration: 200ms;
-    z-index: 6;
+    transition-timing-function: linear;
 }
 
 .card:hover .card-inner {
@@ -208,6 +241,7 @@ body, html {
 .card:hover {
     transform: translate(-10px, -10px);
     transition-duration: 200ms;
+    transition-timing-function: linear;
 }
 
 .card-buttons  {
@@ -217,8 +251,24 @@ body, html {
     bottom: 0;
     left: 78px;
     margin: auto;
-    width: 380px;
     height: 60px;
+}
+
+.facebook {
+    background-image: url(../img/facebook.png);
+    
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);
+}
+
+.pinterest {
+    background-image: url(../img/pinterest.png);
+}
+
+.instagram {
+    background-image: url(../img/instagram.png);
 }
 
 .card_button {
@@ -227,6 +277,9 @@ body, html {
     height: 55px;
     background-color: #fce38a;
     margin: 1px;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: 0em;
 }
 
 .card_button:hover {
@@ -260,21 +313,12 @@ body, html {
     padding: 0;
 }
 
-.team-wrapper::after {
-    content: '';
-    display: block;
-    width: 1200px;
-    height: 1px;
-    margin: 0 auto;
-    background: #e5e5e5;
-    margin-top: 80px;
-}
-
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 1200px;
+    margin-top: 10px;
 }
 
 .form {
@@ -295,9 +339,19 @@ span {
 .subscribe {
     height: 38px;
     width: 150px;
+    text-transform: uppercase;
     background-color: #95e1d3;
+    color: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 input {
     height: 38px;
+    font-style: italic;
+    left: 10px;
+    text-indent: 1em;
+    margin: 0;
+    padding: 0;
 }
